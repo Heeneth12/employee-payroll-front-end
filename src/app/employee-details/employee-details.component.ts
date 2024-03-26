@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { response } from 'express';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
-  styleUrl: './employee-details.component.css',
+  styleUrls: ['./employee-details.component.css'],
 })
 export class EmployeeDetailsComponent {
   userData: any;
+  deletionMessage: string | undefined; // Add a property to store the deletion message
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.getData();
@@ -22,5 +23,20 @@ export class EmployeeDetailsComponent {
       console.log(response);
       this.userData = response;
     });
+  }
+
+  deleteEmployee(id: any) {
+    const url = 'http://localhost:8080/user/deleteByID/' + id;
+    this.http.delete(url, { responseType: 'text' }).subscribe(
+      (response) => {
+        console.log(response);
+        this.deletionMessage = response; // Store the deletion message
+        this.getData(); // Optionally, fetch updated data after deletion
+      },
+      (error) => {
+        console.error('Error occurred:', error);
+        this.deletionMessage = ''; // Reset deletion message on error
+      }
+    );
   }
 }

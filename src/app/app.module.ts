@@ -8,6 +8,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     SearchBarComponent,
     EmployeeDetailsComponent,
+    EmployeeRegisterComponent,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
