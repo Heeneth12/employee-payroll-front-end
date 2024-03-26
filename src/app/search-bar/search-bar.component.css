@@ -1,0 +1,16 @@
+.h2 {
+  font-weight: 700;
+  font-size: large;
+  color: rgb(46, 42, 42);
+}
+
+.button {
+  background-color: #82a70c;
+  margin-left: 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+.search {
+  border-radius: 22px;
+}
