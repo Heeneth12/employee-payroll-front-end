@@ -8,7 +8,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,16 @@ import { EmployeeRegisterComponent } from './employee-register/employee-register
     FooterComponent,
     SearchBarComponent,
     EmployeeDetailsComponent,
-    EmployeeRegisterComponent,
+    AddEmployeeComponent,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class AppModule {}
