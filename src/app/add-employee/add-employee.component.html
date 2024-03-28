@@ -31,7 +31,7 @@
               id="girl"
               formControlName="profileImage"
               value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCNyLKjQn_3nY4KZO7b2sP0u8yOY0FrdLeRYgcKvp9wQ&s"
-              type="checkbox"
+              type="radio"
             />
             <label
               ><img
@@ -44,7 +44,7 @@
               id="boy"
               formControlName="profileImage"
               value="https://www.pngitem.com/pimgs/m/130-1300380_female-user-image-icon-hd-png-download.png"
-              type="checkbox"
+              type="radio"
             />
             <label
               ><img
@@ -57,7 +57,7 @@
               id="girl"
               formControlName="profileImage"
               value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfU_H0DHUqvRIYYRtTOOFi2o3dC1vEI5RTSoXL_KdzY-LKj1RSb0zKtv9qj9Sy4U_xBX0&usqp=CAU"
-              type="checkbox"
+              type="radio"
             />
             <label
               ><img
@@ -70,7 +70,7 @@
               id="boy"
               formControlName="profileImage"
               value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoYalG0iZwdwwSFMhNL4aDADjcSJFcuo31Y9OY6saF8ZG5dq3lLc8uXw0eJfUwvdwjTw&usqp=CAU"
-              type="checkbox"
+              type="radio"
             />
             <label
               ><img
@@ -159,18 +159,22 @@
         ></textarea>
       </div>
       <div class="flex items-center justify-between p-4">
-        <button class="bg-gray-400 text-white p-2 px-8 rounded-sm">
+        <button
+          class="bg-gray-400 cancle-button text-white p-2 px-8 rounded-sm"
+        >
           Cancle
         </button>
 
         <div class="">
           <button
-            class="bg-gray-400 text-white p-2 px-8 rounded-sm mr-4"
+            class="bg-gray-400 submit-button text-white p-2 px-8 rounded-sm mr-4"
             (click)="show()"
           >
             submit
           </button>
-          <button class="bg-gray-400 text-white p-2 px-8 rounded-sm">
+          <button
+            class="bg-gray-400 reset-button text-white p-2 px-8 rounded-sm"
+          >
             Reset
           </button>
         </div>
