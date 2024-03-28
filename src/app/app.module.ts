@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
     SearchBarComponent,
     EmployeeDetailsComponent,
     AddEmployeeComponent,
+    EditEmployeeComponent,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

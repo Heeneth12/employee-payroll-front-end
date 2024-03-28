@@ -1,1 +1,7 @@
-
+.image {
+  width: 26px;
+  height: 26px;
+  margin-right: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}

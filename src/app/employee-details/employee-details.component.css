@@ -7,3 +7,18 @@
   color: #658292;
   padding-left: 10px;
 }
+
+.toggle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 8px;
+}

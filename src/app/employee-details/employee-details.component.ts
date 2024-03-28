@@ -8,6 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./employee-details.component.css'],
 })
 export class EmployeeDetailsComponent {
+  toggle: boolean = false;
+
+  toggleEmployeeEditer() {
+    this.toggle = !this.toggle;
+    console.log(this.toggle);
+  }
+
   userData: any;
   deletionMessage: string | undefined; // Add a property to store the deletion message
 

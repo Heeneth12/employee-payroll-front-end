@@ -1,1 +1,125 @@
-<p>edit-employee works!</p>
+<div class="bg-gray-100 rounded-sm">
+  <div class="container mx-auto">
+    <form class="bg-white shadow-lg rounded px-4 pt-6 pb-8 mb-4 border">
+      <h2 class="text-xl font-semibold mb-6 text-gray-700">
+        Employee Payroll Form
+      </h2>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Name</label
+        >
+        <input
+          id="name"
+          formControlName="employeeName"
+          placeholder="name"
+          type="text"
+          class="border rounded-md px-4 py-2 w-full focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Profile image</label
+        >
+        <label>girl</label>
+        <input
+          id="girl"
+          formControlName="profileImage"
+          value="girl"
+          type="radio"
+        />
+        <label>boy</label>
+        <input
+          id="boy"
+          formControlName="profileImage"
+          value="boy"
+          type="radio"
+        />
+      </div>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Gender</label
+        >
+
+        <div class="px-4">
+          <input
+            class="px-4"
+            id="Male"
+            value="Male"
+            formControlName="employeeGender"
+            type="radio"
+          />
+          <label>Male</label>
+        </div>
+
+        <div class="px-4">
+          <input
+            class="px-4"
+            id="Female"
+            value="Female"
+            formControlName="employeeGender"
+            type="radio"
+          />
+          <label>Female</label>
+        </div>
+      </div>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Department</label
+        >
+        <input
+          id="name"
+          formControlName="employeeDepartment"
+          placeholder="department"
+          type="text"
+          class="border rounded-md px-4 py-2 w-full focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Salary</label
+        >
+        <input
+          id="salary"
+          formControlName="employeeSalary"
+          placeholder="10,000"
+          type="text"
+          class="border rounded-md px-4 py-2 w-full focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Start Date</label
+        >
+        <input
+          id="date"
+          formControlName="startDate"
+          type="date"
+          class="border rounded-md px-4 py-2 w-full focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4 flex items-center">
+        <label class="block text-gray-700 font-semibold text-sm mb-2 mr-4"
+          >Notes</label
+        >
+        <textarea
+          id="Notes"
+          formControlName="employeeNotes"
+          placeholder="note"
+          type="text"
+          class="border rounded-md px-4 py-2 w-full focus:outline-none focus:shadow-outline"
+        ></textarea>
+      </div>
+      <div class="flex items-center justify-between p-4">
+        <button class="bg-gray-400 text-white p-2 px-8 rounded-sm">
+          Cancle
+        </button>
+
+        <div class="">
+          <button class="bg-gray-400 text-white p-2 px-4 rounded-sm">
+            submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -17,14 +17,19 @@
         *ngFor="let item of userData; let i = index"
         class="{{ i % 2 === 0 ? 'bg-white' : 'bg-gray-200' }}"
       >
-        <td class="px-4 py-4 item-center">{{ item.employeeName }}</td>
+        <td class="px-4 py-4 item-center">
+          <div class="flex">
+            <img class="image" src="{{ item.profileImage }}" alt="" />
+            {{ item.employeeName }}
+          </div>
+        </td>
         <td class="px-4 py-4">{{ item.employeeGender }}</td>
         <td class="px-4 py-4">{{ item.employeeDepartment }}</td>
         <td class="px-4 py-4">{{ item.employeeSalary }}</td>
         <td class="px-4 py-4">{{ item.startDate }}</td>
         <td class="px-4 py-4">
           <div class="flex">
-            <button class="svg-button">
+            <button (click)="toggleEmployeeEditer()" class="svg-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -58,4 +63,7 @@
       </tr>
     </tbody>
   </table>
+  <div *ngIf="toggle" class="toggle">
+    <app-edit-employee></app-edit-employee>
+  </div>
 </div>
