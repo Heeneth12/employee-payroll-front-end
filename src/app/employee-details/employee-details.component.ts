@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./employee-details.component.css'],
 })
 export class EmployeeDetailsComponent {
+  selectEmployee(employeeId: any) {
+    this.selectedEmployeeId = employeeId;
+  }
   toggle: boolean = false;
+  selectedEmployeeId: any;
 
   toggleEmployeeEditer() {
     this.toggle = !this.toggle;

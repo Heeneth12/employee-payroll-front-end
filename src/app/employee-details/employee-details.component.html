@@ -30,7 +30,11 @@
           <td class="px-4 py-4">{{ item.startDate }}</td>
           <td class="px-4 py-4">
             <div class="flex">
-              <button (click)="toggleEmployeeEditer()" class="svg-button">
+              <button
+                (click)="toggleEmployeeEditer()"
+                (click)="selectEmployee(item.employeeId)"
+                class="svg-button"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -81,5 +85,5 @@
       />
     </svg>
   </button>
-  <app-edit-employee></app-edit-employee>
+  <app-edit-employee [employeeId]="selectedEmployeeId"></app-edit-employee>
 </div>

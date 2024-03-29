@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-employee.component.css'],
 })
 export class AddEmployeeComponent {
-  //form control inst we can bind for single instance
-
   constructor(private http: HttpClient, private router: Router) {}
 
   data = new FormGroup({
@@ -31,8 +29,14 @@ export class AddEmployeeComponent {
   addEmployeeData() {
     const url = 'http://localhost:8080/user/reg';
 
-    this.http.post<any>(url, this.data.value).subscribe((response) => {
-      console.log(response);
-    });
+    this.http.post(url, this.data.value, { responseType: 'text' }).subscribe(
+      (response) => {
+        console.log(response);
+        // Handle the response text here
+      },
+      (error) => {
+        console.error('Error occurred:', error);
+      }
+    );
   }
 }
