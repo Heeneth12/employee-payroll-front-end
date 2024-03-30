@@ -34,6 +34,10 @@ export class EditEmployeeComponent {
     this.http.put(url, this.editData.value, { responseType: 'text' }).subscribe(
       (response) => {
         console.log(response);
+
+        if (response == 'Edited Successfully') {
+          this.router.navigate(['/']);
+        }
       },
       (error) => {
         console.error('Error:', error);

@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
+import { NotificationBarComponent } from './notification-bar/notification-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
     EmployeeDetailsComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
+    NotificationBarComponent,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

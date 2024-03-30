@@ -87,3 +87,6 @@
   </button>
   <app-edit-employee [employeeId]="selectedEmployeeId"></app-edit-employee>
 </div>
+<div *ngIf="notificationToggle">
+  <app-notification-bar></app-notification-bar>
+</div>

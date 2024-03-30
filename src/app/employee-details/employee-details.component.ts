@@ -12,6 +12,8 @@ export class EmployeeDetailsComponent {
     this.selectedEmployeeId = employeeId;
   }
   toggle: boolean = false;
+  notificationToggle: boolean = false;
+
   selectedEmployeeId: any;
 
   toggleEmployeeEditer() {
@@ -41,8 +43,16 @@ export class EmployeeDetailsComponent {
     this.http.delete(url, { responseType: 'text' }).subscribe(
       (response) => {
         console.log(response);
+
         this.deletionMessage = response; // Store the deletion message
         this.getData(); // Optionally, fetch updated data after deletion
+        if (this.deletionMessage == 'Employee successfully deleted') {
+          this.notificationToggle = true;
+          console.log(this.notificationToggle);
+          setTimeout(() => {
+            this.notificationToggle = false;
+          }, 5000); // Set timeout to make notificationToggle false after 5 seconds
+        }
       },
       (error) => {
         console.error('Error occurred:', error);
