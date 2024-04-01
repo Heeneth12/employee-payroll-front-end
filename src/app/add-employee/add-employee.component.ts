@@ -33,7 +33,7 @@ export class AddEmployeeComponent {
       (response) => {
         console.log(response);
         // Handle the response text here
-        if (response == 'user registered successfully') {
+        if (response == 'User registered successfully') {
           this.router.navigate(['/']);
         }
       },

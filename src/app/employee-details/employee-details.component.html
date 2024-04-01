@@ -5,12 +5,12 @@
     <table class="w-full table-auto">
       <thead>
         <tr class="bg-gray-200 thead">
-          <th class="px-4 py-4">NAME</th>
-          <th class="px-4 py-4">GENDER</th>
-          <th class="px-4 py-4">DEPARTMENT</th>
-          <th class="px-4 py-4">SALARY</th>
-          <th class="px-4 py-4">START DATE</th>
-          <th class="px-4 py-4">ACTIONS</th>
+          <th class="px-4 py-4 text-left">NAME</th>
+          <th class="px-4 py-4 text-left">GENDER</th>
+          <th class="px-4 py-4 text-left">DEPARTMENT</th>
+          <th class="px-4 py-4 text-left">SALARY</th>
+          <th class="px-4 py-4 text-left">START DATE</th>
+          <th class="px-4 py-4 text-left">ACTIONS</th>
         </tr>
       </thead>
       <tbody>
@@ -26,7 +26,7 @@
           </td>
           <td class="px-4 py-4">{{ item.employeeGender }}</td>
           <td class="px-4 py-4">{{ item.employeeDepartment }}</td>
-          <td class="px-4 py-4">{{ item.employeeSalary }}</td>
+          <td class="px-4 py-4">&#x20b9; {{ item.employeeSalary }}</td>
           <td class="px-4 py-4">{{ item.startDate }}</td>
           <td class="px-4 py-4">
             <div class="flex">
